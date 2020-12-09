@@ -429,8 +429,11 @@ export default class Button extends React.Component {
     return (
       <TouchableWithoutFeedback
         testID="aws-btn-content-view"
-        onPressIn={this.pressIn}
+        onPressIn={() => this.pressIn()}
         onPressOut={this.pressOut}
+        delayPressIn={0}
+        delayPressOut={0}
+        delayLongPress={0}
       >
         <Animated.View
           testID="aws-btn-content-2"
